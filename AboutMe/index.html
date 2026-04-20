@@ -3,20 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About Me | Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .resume-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 90%;
+            z-index: 1;
+            position: relative;
+            text-align: left;
+        }
+        .header-nav {
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+        .back-link:hover {
+            color: #60a5fa;
+        }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            overflow-x: auto;
+        }
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .tab-btn:hover {
+            background: rgba(255,255,255,0.05);
+            color: var(--text-main);
+        }
+        .tab-btn.active {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--primary);
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .timeline-item {
+            background: var(--bg-surface);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .timeline-item:hover {
+            transform: translateX(10px);
+            border-color: rgba(255,255,255,0.2);
+        }
+        .timeline-item h3 {
+            margin: 0 0 0.5rem 0;
+            color: var(--text-main);
+            font-size: 1.3rem;
+        }
+        .timeline-meta {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .timeline-meta span.date {
+            color: var(--text-muted);
+        }
+        ul.job-tasks {
+            color: var(--text-muted);
+            padding-left: 20px;
+            line-height: 1.7;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .skill-tag {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--secondary);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>About Me</h1>
+    <div class="ambient-light light-1"></div>
+    <div class="ambient-light light-2"></div>
+    
+    <div class="resume-container">
+        <header class="header-nav">
+            <h1>Interactive Resume</h1>
             <a href="../index.html" class="back-link">← Back to Hub</a>
         </header>
-        <main class="content-box">
-            <!-- Add your personal story and details here -->
-            <h2>Hello!</h2>
-            <p>This is a blank template ready for your personal story, resume details, and background.</p>
-        </main>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('experience')">Experience</button>
+            <button class="tab-btn" onclick="showTab('education')">Education</button>
+            <button class="tab-btn" onclick="showTab('skills')">Skills</button>
+        </div>
+
+        <!-- Experience Tab -->
+        <div id="experience" class="tab-content active">
+            <div class="timeline-item">
+                <h3>Senior Software Trainer</h3>
+                <div class="timeline-meta">
+                    <span>TechCorp Inc.</span>
+                    <span class="date">2023 - Present</span>
+                </div>
+                <ul class="job-tasks">
+                    <li>Design and deliver comprehensive software training programs using ADDIE methodologies.</li>
+                    <li>Develop interactive video courses, knowledgebase articles, and in-software exercises.</li>
+                    <li>Manage LMS deployment and track certification metrics across the enterprise.</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <h3>Instructional Designer</h3>
+                <div class="timeline-meta">
+                    <span>EduTech Solutions</span>
+                    <span class="date">2020 - 2023</span>
+                </div>
+                <ul class="job-tasks">
+                    <li>Collaborated with SMEs to translate complex technical workflows into accessible curricula.</li>
+                    <li>Created engaging multimedia assets including video demonstrations and interactive PDFs.</li>
+                    <li>Iteratively improved training delivery based on adult learning principles (Andragogy).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education Tab -->
+        <div id="education" class="tab-content">
+            <div class="timeline-item">
+                <h3>Master of Education (Instructional Design)</h3>
+                <div class="timeline-meta">
+                    <span>State University</span>
+                    <span class="date">2018 - 2020</span>
+                </div>
+                <ul class="job-tasks">
+                    <li>Focus on adult learning theories and multimedia design.</li>
+                    <li>Capstone Project: Evaluating the efficacy of microlearning in software adoption.</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <h3>Bachelor of Arts in Communications</h3>
+                <div class="timeline-meta">
+                    <span>University of Communications</span>
+                    <span class="date">2014 - 2018</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Tab -->
+        <div id="skills" class="tab-content">
+            <div class="timeline-item">
+                <h3>Core Competencies</h3>
+                <div class="skills-grid" style="margin-top: 15px;">
+                    <div class="skill-tag">Instructional Design</div>
+                    <div class="skill-tag">ADDIE & Backward Design</div>
+                    <div class="skill-tag">Video Production</div>
+                    <div class="skill-tag">LMS Administration</div>
+                    <div class="skill-tag">HTML / CSS</div>
+                    <div class="skill-tag">Technical Writing</div>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <script>
+        function showTab(tabId) {
+            // Remove active class from all tabs and contents
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
