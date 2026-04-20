@@ -25,8 +25,7 @@ body {
 }
 
 /* Ambient light effects */
-body::before, body::after {
-    content: '';
+.ambient-light {
     position: fixed;
     border-radius: 50%;
     filter: blur(120px);
@@ -36,7 +35,7 @@ body::before, body::after {
     pointer-events: none;
 }
 
-body::before {
+.light-1 {
     width: 40vw;
     height: 40vw;
     background: radial-gradient(circle, rgba(59,130,246,0.3) 0%, rgba(15,23,42,0) 70%);
@@ -44,7 +43,7 @@ body::before {
     left: -10%;
 }
 
-body::after {
+.light-2 {
     width: 35vw;
     height: 35vw;
     background: radial-gradient(circle, rgba(16,185,129,0.2) 0%, rgba(15,23,42,0) 70%);
