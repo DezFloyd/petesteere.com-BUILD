@@ -170,6 +170,27 @@ header p {
     opacity: 0.25;
 }
 
+.headshot-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+    margin-bottom: 20px;
+    animation: borderBreathe 4s infinite alternate ease-in-out;
+}
+
+@keyframes borderBreathe {
+    0% {
+        border-color: rgba(59, 130, 246, 0.3);
+        box-shadow: 0 0 5px rgba(59, 130, 246, 0.2);
+    }
+    100% {
+        border-color: rgba(59, 130, 246, 1);
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+    }
+}
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
