@@ -175,19 +175,19 @@ header p {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--text-muted);
     margin-bottom: 20px;
     animation: borderBreathe 4s infinite alternate ease-in-out;
 }
 
 @keyframes borderBreathe {
     0% {
-        border-color: rgba(59, 130, 246, 0.3);
-        box-shadow: 0 0 5px rgba(59, 130, 246, 0.2);
+        border-color: rgba(148, 163, 184, 0.2);
+        box-shadow: 0 0 5px rgba(148, 163, 184, 0.1);
     }
     100% {
-        border-color: rgba(59, 130, 246, 1);
-        box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+        border-color: rgba(148, 163, 184, 0.7);
+        box-shadow: 0 0 15px rgba(148, 163, 184, 0.5);
     }
 }
 

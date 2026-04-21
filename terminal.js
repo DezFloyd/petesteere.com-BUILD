@@ -5,6 +5,86 @@
     const isSubdir = window.location.pathname.includes('/AboutMe/') || window.location.pathname.includes('/Portfolio/');
     const basePath = isSubdir ? '../' : './';
 
+    // Inject Terminal CSS
+    const style = document.createElement('style');
+    style.innerHTML = `
+        #dev-nav-wrapper {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        #dev-nav-toggle {
+            background: #0f172a;
+            color: #10b981;
+            border: 1px solid #10b981;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        #dev-nav-toggle:hover {
+            background: #10b981;
+            color: #0f172a;
+        }
+        #dev-terminal {
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid #10b981;
+            width: 380px;
+            height: 280px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+            color: #10b981;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform-origin: bottom right;
+        }
+        #dev-terminal.hidden {
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+            pointer-events: none;
+        }
+        #terminal-output {
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        #terminal-output div {
+            margin-bottom: 4px;
+        }
+        #terminal-input-line {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid rgba(16, 185, 129, 0.3);
+            padding-top: 8px;
+        }
+        .prompt {
+            margin-right: 8px;
+            font-weight: bold;
+        }
+        #terminal-input {
+            background: transparent;
+            border: none;
+            color: #10b981;
+            font-family: inherit;
+            font-size: 0.9rem;
+            flex-grow: 1;
+            outline: none;
+        }
+    `;
+    document.head.appendChild(style);
+
     // Inject Terminal HTML
     const wrapper = document.createElement('div');
     wrapper.id = 'dev-nav-wrapper';
