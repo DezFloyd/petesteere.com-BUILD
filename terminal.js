@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+function initTerminal() {
     if (document.getElementById('dev-nav-wrapper')) return;
 
     // Calculate relative path for navigation commands
@@ -122,7 +122,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function initOutput() {
-        output.innerHTML = '<div>DezOS Terminal v1.0</div><div>Type \\'help\\' to see available commands.</div>';
+        output.innerHTML = "<div>DezOS Terminal v1.0</div><div>Type 'help' to see available commands.</div>";
     }
 
     function saveState() {
@@ -189,4 +189,10 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTerminal);
+} else {
+    initTerminal();
+}
