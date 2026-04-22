@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Inject Terminal HTML
     const wrapper = document.createElement('div');
     wrapper.id = 'dev-nav-wrapper';
-    wrapper.innerHTML = \`
+    wrapper.innerHTML = `
         <div id="dev-terminal" class="hidden">
             <div id="terminal-output"></div>
             <div id="terminal-input-line">
@@ -97,7 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>
         <button id="dev-nav-toggle">_Dev Nav</button>
-    \`;
+    `;
     document.body.appendChild(wrapper);
 
     const toggleBtn = document.getElementById('dev-nav-toggle');
@@ -153,7 +153,7 @@ window.addEventListener('DOMContentLoaded', () => {
     input.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
             const val = this.value.trim();
-            printLine(\`<span style="color: #fff">pete@local:~$</span> \${val}\`);
+            printLine(`<span style="color: #fff">pete@local:~$</span> ${val}`);
             this.value = '';
             
             if (!val) return;
@@ -179,13 +179,13 @@ window.addEventListener('DOMContentLoaded', () => {
                     if (dest === 'home') window.location.href = basePath + 'index.html';
                     else if (dest === 'about') window.location.href = basePath + 'AboutMe/index.html';
                     else if (dest === 'portfolio') window.location.href = basePath + 'Portfolio/index.html';
-                    else printLine(\`Unknown destination: \${dest}\`);
+                    else printLine(`Unknown destination: ${dest}`);
                 }
             } else if (cmd === 'clear') {
                 output.innerHTML = '';
                 saveState();
             } else {
-                printLine(\`Command not found: \${cmd}\`);
+                printLine(`Command not found: ${cmd}`);
             }
         }
     });
