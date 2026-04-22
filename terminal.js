@@ -1,4 +1,4 @@
-(function() {
+window.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('dev-nav-wrapper')) return;
 
     // Calculate relative path for navigation commands
@@ -88,7 +88,7 @@
     // Inject Terminal HTML
     const wrapper = document.createElement('div');
     wrapper.id = 'dev-nav-wrapper';
-    wrapper.innerHTML = `
+    wrapper.innerHTML = \`
         <div id="dev-terminal" class="hidden">
             <div id="terminal-output"></div>
             <div id="terminal-input-line">
@@ -97,7 +97,7 @@
             </div>
         </div>
         <button id="dev-nav-toggle">_Dev Nav</button>
-    `;
+    \`;
     document.body.appendChild(wrapper);
 
     const toggleBtn = document.getElementById('dev-nav-toggle');
@@ -189,4 +189,4 @@
             }
         }
     });
-})();
+});
