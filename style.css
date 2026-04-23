@@ -1,11 +1,11 @@
 :root {
-    --primary: #d946ef; /* Fuchsia 500 (Pink/Purple) */
-    --secondary: #8b5cf6; /* Violet 500 (Purple) */
-    --bg-base: #1e1b4b; /* Indigo 950 (Deep Purple/Pinkish base) */
-    --bg-surface: rgba(255, 255, 255, 0.05); /* Very slight white for glass effect */
-    --text-main: #fdf4ff; /* Fuchsia 50 */
-    --text-muted: #f5d0fe; /* Fuchsia 200 */
-    --border-color: rgba(217, 70, 239, 0.2); /* Fuchsia border */
+    --primary: #f472b6; /* Pink 400 */
+    --secondary: #d946ef; /* Fuchsia 500 */
+    --bg-base: #500724; /* Pink 950 (Very deep pink/maroon base) */
+    --bg-surface: rgba(253, 242, 248, 0.08); /* Pink 50 tint */
+    --text-main: #fdf2f8; /* Pink 50 */
+    --text-muted: #fbcfe8; /* Pink 200 */
+    --border-color: rgba(244, 114, 182, 0.3); /* Pink border */
 }
 
 * {
@@ -16,8 +16,8 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--bg-base);
     background-image: 
-        radial-gradient(at 0% 0%, rgba(217, 70, 239, 0.15) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+        radial-gradient(at 0% 0%, rgba(244, 114, 182, 0.3) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(217, 70, 239, 0.2) 0px, transparent 50%);
     color: var(--text-main);
     margin: 0;
     padding: 0;
@@ -35,14 +35,14 @@ body {
     border-radius: 50%;
     filter: blur(120px);
     z-index: 0;
-    opacity: 0.6;
+    opacity: 0.7;
     animation: float 10s infinite alternate ease-in-out;
 }
 
 .light-1 {
     width: 50vw;
     height: 50vw;
-    background: radial-gradient(circle, rgba(217, 70, 239, 0.4) 0%, rgba(30, 27, 75, 0) 70%);
+    background: radial-gradient(circle, rgba(244, 114, 182, 0.5) 0%, rgba(80, 7, 36, 0) 70%);
     top: -15%;
     left: -10%;
 }
@@ -50,7 +50,7 @@ body {
 .light-2 {
     width: 45vw;
     height: 45vw;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(30, 27, 75, 0) 70%);
+    background: radial-gradient(circle, rgba(217, 70, 239, 0.4) 0%, rgba(80, 7, 36, 0) 70%);
     bottom: -10%;
     right: -5%;
     animation-delay: -3s;
@@ -82,7 +82,7 @@ header h1 {
     color: var(--text-main);
     margin-bottom: 0.5rem;
     letter-spacing: -1px;
-    background: linear-gradient(to right, #fff, #f5d0fe);
+    background: linear-gradient(to right, #fff, #fbcfe8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -207,7 +207,7 @@ header p {
 
 /* Home Page Content Sections */
 .disclaimer {
-    background: rgba(217, 70, 239, 0.1);
+    background: rgba(244, 114, 182, 0.15);
     border-left: 4px solid var(--primary);
     padding: 1rem 1.5rem;
     margin-bottom: 2.5rem;
@@ -294,7 +294,7 @@ footer {
 }
 
 .footer-disclaimer {
-    background: rgba(217, 70, 239, 0.05);
+    background: rgba(244, 114, 182, 0.08);
     border: 1px solid var(--border-color);
     padding: 1.5rem;
     margin-bottom: 2rem;
