@@ -280,6 +280,44 @@ header p {
     color: var(--text-main);
 }
 
+/* Footer & Disclaimer Styles */
+footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-disclaimer {
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.footer-disclaimer strong {
+    color: var(--text-main);
+}
+
+.article-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.article-link:hover {
+    text-decoration: underline;
+}
+
 /* Dev Nav Terminal */
 #dev-nav-wrapper {
     position: fixed;
