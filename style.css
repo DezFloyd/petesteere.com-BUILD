@@ -146,6 +146,21 @@ header p {
     opacity: 0.3;
 }
 
+/* Wave Text Animation */
+.wave-text span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.text-link:hover .wave-text span {
+    animation: wave 0.8s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
 .headshot-img {
     width: 100px;
     height: 100px;

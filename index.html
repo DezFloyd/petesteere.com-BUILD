@@ -24,11 +24,11 @@
 
         <nav class="links-grid">
             <a href="Portfolio/index.html" class="text-link portfolio-link">
-                <h2>Portfolio</h2>
+                <h2 class="wave-text">Portfolio</h2>
                 <div class="link-glow"></div>
             </a>
             <a href="AboutMe/index.html" class="text-link about-link">
-                <h2>About Me</h2>
+                <h2 class="wave-text">About Me</h2>
                 <div class="link-glow"></div>
             </a>
         </nav>
@@ -101,5 +101,15 @@
         </footer>
     </div>
     <script src="terminal.js"></script>
+    <script>
+        // Wrap letters for wave animation
+        document.querySelectorAll('.wave-text').forEach(el => {
+            const text = el.innerText;
+            el.innerHTML = text.split('').map((letter, i) => {
+                if (letter === ' ') return '<span>&nbsp;</span>';
+                return `<span style="animation-delay: ${i * 0.05}s">${letter}</span>`;
+            }).join('');
+        });
+    </script>
 </body>
 </html>
