@@ -99,29 +99,10 @@ header p {
 
 .intro-block p {
     font-size: 1.1rem;
-    line-height: 1.2; /* Tight single spacing */
+    line-height: 1.5; /* Increased for better link clearance */
     margin: 0 0 1rem 0; /* Return between paragraphs, no indent */
     color: var(--text-muted);
     text-align: left;
-}
-
-.nav-sentence {
-    display: flex;
-    justify-content: flex-start; /* Left justified */
-    align-items: baseline;
-    gap: 0.4rem; /* Tightened gap */
-    margin: 3rem 0 4rem 0;
-    flex-wrap: nowrap; /* Force single line */
-    overflow-x: auto; /* Allow scroll if extreme */
-    max-width: 100%;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
-}
-
-.static-text {
-    color: var(--text-muted);
-    font-size: 0.95rem; /* Sized down */
-    font-weight: 300;
 }
 
 .text-link {
@@ -129,23 +110,25 @@ header p {
     color: var(--text-main);
     position: relative;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .text-link span {
-    font-size: 1rem; /* Scaled down significantly for mobile fit */
+    font-size: 1.1rem; /* Match paragraph size */
     font-weight: 700;
     letter-spacing: -0.2px;
     z-index: 2;
     position: relative;
     display: inline-block;
+    color: var(--text-main);
 }
 
 .link-glow {
     position: absolute;
-    width: 120%;
-    height: 120%;
+    width: 150%;
+    height: 150%;
     background: var(--primary);
-    filter: blur(30px);
+    filter: blur(25px);
     border-radius: 50%;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -185,7 +168,7 @@ header p {
 
 @keyframes wave {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    50% { transform: translateY(-5px); }
 }
 
 .headshot-img {
