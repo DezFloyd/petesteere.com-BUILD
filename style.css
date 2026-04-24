@@ -1,11 +1,11 @@
 :root {
-    --primary: #3b82f6; /* Professional blue */
-    --secondary: #10b981; /* Professional emerald */
-    --bg-base: #0f172a; /* Slate 900 */
-    --bg-surface: rgba(30, 41, 59, 0.6); /* Slate 800 with transparency */
-    --text-main: #f1f5f9;
-    --text-muted: #94a3b8;
-    --border-color: rgba(255, 255, 255, 0.1);
+    --primary: #60a5fa; /* Muted blue */
+    --secondary: #34d399; /* Muted emerald */
+    --bg-base: #0a0f1e; /* Deeper, cooler slate */
+    --bg-surface: rgba(15, 23, 42, 0.4); /* Darker glass */
+    --text-main: #e2e8f0; /* Soft white/grey */
+    --text-muted: #64748b; /* Muted slate grey */
+    --border-color: rgba(255, 255, 255, 0.05); /* Very subtle borders */
 }
 
 * {
@@ -30,28 +30,28 @@ body {
 .ambient-light {
     position: absolute;
     border-radius: 50%;
-    filter: blur(100px);
+    filter: blur(120px);
     z-index: 0;
-    opacity: 0.85;
-    animation: float 8s infinite alternate ease-in-out;
+    opacity: 0.4; /* Significantly muted */
+    animation: float 12s infinite alternate ease-in-out;
 }
 
 .light-1 {
-    width: 40vw;
-    height: 40vw;
-    background: radial-gradient(circle, rgba(59,130,246,0.6) 0%, rgba(15,23,42,0) 70%);
-    top: -10%;
+    width: 45vw;
+    height: 45vw;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.15) 0%, rgba(10, 15, 30, 0) 70%);
+    top: -15%;
     left: -10%;
 }
 
 .light-2 {
-    width: 35vw;
-    height: 35vw;
-    background: radial-gradient(circle, rgba(16,185,129,0.55) 0%, rgba(15,23,42,0) 70%);
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, rgba(52, 211, 153, 0.1) 0%, rgba(10, 15, 30, 0) 70%);
     bottom: -10%;
     right: -5%;
     animation-delay: -3s;
-    animation-duration: 12s;
+    animation-duration: 15s;
 }
 
 @keyframes float {
@@ -79,7 +79,7 @@ header h1 {
     color: var(--text-main);
     margin-bottom: 0.5rem;
     letter-spacing: -1px;
-    background: linear-gradient(to right, #fff, #94a3b8);
+    background: linear-gradient(to right, #e2e8f0, #94a3b8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -195,14 +195,14 @@ header p {
 
 /* Home Page Content Sections */
 .disclaimer {
-    background: rgba(59, 130, 246, 0.1);
-    border-left: 4px solid var(--primary);
+    background: rgba(148, 163, 184, 0.05);
+    border-left: 2px solid var(--primary);
     padding: 1rem 1.5rem;
     margin-bottom: 2.5rem;
     border-radius: 0 8px 8px 0;
     text-align: left;
-    font-size: 0.95rem;
-    color: var(--text-main);
+    font-size: 0.9rem;
+    color: var(--text-muted);
     line-height: 1.5;
     animation: fadeInDown 1.2s ease-out;
 }
