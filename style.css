@@ -91,52 +91,34 @@ header p {
 }
 
 .links-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
 }
 
-.card {
-    background: var(--bg-surface);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 2.5rem 2rem;
-    border-radius: 16px;
+.text-link {
     text-decoration: none;
     color: var(--text-main);
-    border: 1px solid var(--border-color);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
-    overflow: hidden;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    transition: all 0.3s ease;
 }
 
-.card h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    color: var(--text-main);
-    transition: color 0.3s ease;
-}
-
-.card p {
+.text-link h2 {
     margin: 0;
-    color: var(--text-muted);
-    line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    z-index: 2;
+    position: relative;
 }
 
-/* Stylish hover effects */
-.card-glow {
+.link-glow {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 140%;
+    height: 140%;
     background: var(--primary);
-    filter: blur(60px);
+    filter: blur(40px);
     border-radius: 50%;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -144,30 +126,24 @@ header p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 1;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.portfolio-card:hover h2 {
+.portfolio-link:hover h2 {
     color: var(--primary);
 }
 
-.portfolio-card:hover .card-glow {
-    opacity: 0.35;
+.portfolio-link:hover .link-glow {
+    opacity: 0.4;
 }
 
-.about-card:hover h2 {
+.about-link:hover h2 {
     color: var(--secondary);
 }
 
-.about-card:hover .card-glow {
+.about-link:hover .link-glow {
     background: var(--secondary);
-    opacity: 0.25;
+    opacity: 0.3;
 }
 
 .headshot-img {
