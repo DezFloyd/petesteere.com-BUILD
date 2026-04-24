@@ -90,6 +90,20 @@ header p {
     font-weight: 300;
 }
 
+.intro-block {
+    max-width: 700px;
+    margin: 2rem auto 0;
+    text-align: left;
+}
+
+.intro-block p {
+    font-size: 1.1rem;
+    line-height: 1.2; /* Tight single spacing */
+    margin: 0 0 1rem 0; /* Return between paragraphs, no indent */
+    color: var(--text-muted);
+    text-align: left;
+}
+
 .links-grid {
     display: flex;
     justify-content: center;
