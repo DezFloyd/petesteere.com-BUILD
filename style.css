@@ -110,7 +110,7 @@ header p {
     color: var(--text-main);
     position: relative;
     transition: all 0.3s ease;
-    display: inline-block;
+    display: inline;
 }
 
 .text-link span {
@@ -119,7 +119,7 @@ header p {
     letter-spacing: -0.2px;
     z-index: 2;
     position: relative;
-    display: inline-block;
+    display: inline;
     color: var(--text-main);
 }
 
