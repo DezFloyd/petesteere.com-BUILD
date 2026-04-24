@@ -105,20 +105,22 @@ header p {
     text-align: left;
 }
 
-.links-grid {
+.nav-sentence {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
+    justify-content: flex-start; /* Left justified */
+    align-items: baseline;
+    gap: 0.8rem;
+    margin: 3rem 0 4rem 0;
     flex-wrap: wrap;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .static-text {
     color: var(--text-muted);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    font-style: italic;
 }
 
 .text-link {
@@ -128,21 +130,21 @@ header p {
     transition: all 0.3s ease;
 }
 
-.text-link h2 {
-    margin: 0;
-    font-size: 2rem;
+.text-link span {
+    font-size: 1.8rem; /* Bigger links */
     font-weight: 700;
     letter-spacing: -0.5px;
     z-index: 2;
     position: relative;
+    display: inline-block;
 }
 
 .link-glow {
     position: absolute;
-    width: 140%;
-    height: 140%;
+    width: 120%;
+    height: 120%;
     background: var(--primary);
-    filter: blur(40px);
+    filter: blur(30px);
     border-radius: 50%;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -153,7 +155,7 @@ header p {
     z-index: 1;
 }
 
-.portfolio-link:hover h2 {
+.portfolio-link:hover span {
     color: var(--primary);
 }
 
@@ -161,7 +163,7 @@ header p {
     opacity: 0.4;
 }
 
-.about-link:hover h2 {
+.about-link:hover span {
     color: var(--secondary);
 }
 
