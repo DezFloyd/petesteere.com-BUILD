@@ -242,7 +242,7 @@ header p {
 }
 
 .content-block p {
-    text-align: justify;
+    text-align: left;
 }
 
 .content-block h2 {
