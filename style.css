@@ -120,11 +120,7 @@ header p {
     z-index: 2;
     position: relative;
     display: inline;
-    color: var(--primary); /* Use primary color to make links stand out */
-}
-
-.about-link span {
-    color: var(--secondary); /* Use secondary color for the second link */
+    color: var(--text-main);
 }
 
 .link-glow {
